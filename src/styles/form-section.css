@@ -1,0 +1,36 @@
+.form-section {
+  padding: 1.5rem;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  border-style: solid;
+  border-color: rgb(107, 107, 107);
+  border-radius: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field > input {
+  height: 30px;
+  padding: 4px 8px;
+
+  border-radius: 6px;
+  border-style: solid;
+  border-color: rgb(107, 107, 107);
+}
+
+.input-field > label {
+  color: rgb(107, 107, 107);
+}

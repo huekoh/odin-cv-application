@@ -1,11 +1,17 @@
 import { useState } from "react";
-import Header from "./components/Header"
 import './styles/App.css'
+import Header from "./components/Header"
+import PersonalInfo from "./components/form-section/PersonalInfo";
 
 function App() {
   return (
     <>
-      <Header />
+      <div id="header-container">
+          <Header />
+      </div>
+      <div id="side-bar-container">
+        <PersonalInfo />
+      </div>
     </>
   )
 }
