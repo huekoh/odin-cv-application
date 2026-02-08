@@ -6,12 +6,21 @@ import EducationInfo from "./components/form-section/EducationInfo"
 import MyDocument from "./components/pdf-section/Document"
 
 function App() {
+  const [personalInfo, setPersonalInfo] = useState({
+    fullName: "Tan Jun Jie",
+    title: "Data Analyst Undergraduate",
+    email: "tanjj01@gmail.com",
+    contactNumber: "8744 0293",
+    linkedIn: "linkedin.com/in/tanjj123456",
+    addUrl: "",
+  })
+
   const [educationItems, setEducationItems] = useState([
     {
         institutionName: "National University of Singapore",
         course: "Computer Science",
         graduationDate: "May 2027",
-        description: "Specialing in software engineering, parallel computing",
+        description: "Specialing in data analysis, parallel computing",
     }
   ]);
 
@@ -21,7 +30,10 @@ function App() {
           <Header />
       </div>
       <div id="side-bar-container">
-        <PersonalInfo />
+        <PersonalInfo 
+            personalInfo={personalInfo}
+            setPersonalInfo={setPersonalInfo}
+        />
 
         <EducationInfo 
             educationItems={educationItems}
@@ -29,7 +41,9 @@ function App() {
         />
       </div>
       <div id="document-container">
-        <MyDocument />
+        <MyDocument 
+          personalInfo={personalInfo}
+        />
       </div>
     </div>
   )

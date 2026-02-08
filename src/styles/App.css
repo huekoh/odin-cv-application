@@ -2,6 +2,8 @@
   display: grid;
   height: 100vh;
 
+  background-color: rgb(255, 255, 255);
+
   grid-template-columns: max-content 1fr;
   grid-template-rows: max-content 1fr;
 }

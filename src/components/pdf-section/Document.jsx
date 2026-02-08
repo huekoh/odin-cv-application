@@ -2,25 +2,36 @@ import { Document, Page, Text, View, StyleSheet, PDFViewer } from '@react-pdf/re
 
 const styles = StyleSheet.create({
   page: {
-    flexDirection: 'row',
     backgroundColor: '#FFFFFF',
-  },
-  section: {
-    margin: 10,
-    padding: 10,
+    padding: 30,
+    paddingTop: 40,
+    fontSize: 11,
     flexGrow: 1,
   },
+  header: {
+    alignItems: "center",
+    gap: "8px"
+  }
 });
 
 
-function MyDocument() {
+function MyDocument({personalInfo}) {
   return (
     <PDFViewer style={{ width: '100%', height: '100%' }}>
         <Document>
             <Page size="A4" style={styles.page}>
-            <View style={styles.section}>
-                <Text>Hello world, this is some text in my PDF renderer</Text>
-            </View>
+              <View style={styles.header}>
+                  <Text style={{fontSize: 20, fontWeight: "bold"}}>{personalInfo.fullName}</Text>
+                  <View style={{flexDirection: 'row'}}>
+                    <Text>
+                      {Object.entries(personalInfo)
+                      .filter(([key, value]) => value.length > 0 && key !== "fullName")
+                      .map(([key, value]) => value)
+                      .join(" | ")
+                    }
+                    </Text>
+                  </View>
+              </View>
             </Page>
         </Document>
     </PDFViewer>

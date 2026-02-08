@@ -81,14 +81,14 @@ function EducationInfo({educationItems, setEducationItems}) {
                 <div className="form-btns">
                     <button 
                         type="submit"
-                        className="submit-btn"
+                        className="submit-btn clickable"
                         onClick={handleFormSubmit}
                     >
                         Submit
                     </button>
                     <button 
                         type="reset"
-                        className="cancel-btn"
+                        className="cancel-btn clickable"
                         onClick={handleFormCancel}
                     >
                         Cancel
