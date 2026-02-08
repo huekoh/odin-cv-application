@@ -31,6 +31,35 @@ form {
   border-color: rgb(107, 107, 107);
 }
 
+.input-field > textarea {
+  height: 80px;
+  padding: 4px 8px;
+
+  border-radius: 6px;
+  border-style: solid;
+  border-color: rgb(107, 107, 107);
+}
+
 .input-field > label {
   color: rgb(107, 107, 107);
+}
+
+.form-btns {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  color: white;
+  border-radius: 6px;
+}
+
+.submit-btn {
+  background-color: rgb(95, 172, 77);
+}
+
+.cancel-btn {
+  background-color: rgb(208, 99, 99);
 }

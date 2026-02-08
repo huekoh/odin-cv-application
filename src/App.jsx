@@ -2,6 +2,7 @@ import { useState } from "react";
 import './styles/App.css'
 import Header from "./components/Header"
 import PersonalInfo from "./components/form-section/PersonalInfo";
+import EducationInfo from "./components/form-section/EducationInfo"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </div>
       <div id="side-bar-container">
         <PersonalInfo />
+        <EducationInfo />
       </div>
     </>
   )
