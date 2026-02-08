@@ -5,6 +5,15 @@ import PersonalInfo from "./components/form-section/PersonalInfo";
 import EducationInfo from "./components/form-section/EducationInfo"
 
 function App() {
+  const [educationItems, setEducationItems] = useState([
+    {
+        institutionName: "National University of Singapore",
+        course: "Computer Science",
+        graduationDate: "May 2027",
+        description: "Specialing in software engineering, parallel computing",
+    }
+  ]);
+
   return (
     <>
       <div id="header-container">
@@ -12,7 +21,11 @@ function App() {
       </div>
       <div id="side-bar-container">
         <PersonalInfo />
-        <EducationInfo />
+
+        <EducationInfo 
+            educationItems={educationItems}
+            setEducationItems={setEducationItems}
+        />
       </div>
     </>
   )

@@ -7,33 +7,33 @@ function PersonalInfo() {
             <h2>Personal Information</h2>
             <form>
                 <div className="input-field">
-                    <label>Full Name</label>
-                    <input type="text" />
+                    <label htmlFor="fullName">Full Name</label>
+                    <input type="text" name="fullName" id="fullName"/>
                 </div>
 
                 <div className="input-field">
-                    <label>Title</label>
-                    <input type="text" />
+                    <label htmlFor="title">Title</label>
+                    <input type="text" name="title" id="title"/>
                 </div>
 
                 <div className="input-field">
-                    <label>Email</label>
-                    <input type="email" />
+                    <label htmlFor="email">Email</label>
+                    <input type="email" name="email" id="email"/>
                 </div>
 
                 <div className="input-field">
-                    <label>Contact Number</label>
-                    <input type="tel"/>
+                    <label htmlFor="contactNumber">Contact Number</label>
+                    <input type="tel" name="contactNumber" id="contactNumber"/>
                 </div>
 
                 <div className="input-field">
-                    <label>LinkedIn</label>
-                    <input type="url" />
+                    <label htmlFor="linkedIn">LinkedIn</label>
+                    <input type="url" name="linkedIn" id="linkedIn"/>
                 </div>
 
                 <div className="input-field">
-                    <label>Additional URL</label>
-                    <input type="url" />
+                    <label htmlFor="addUrl">Additional URL</label>
+                    <input type="url" name="addUrl" id="addUrl"/>
                 </div>
             </form>
         </div>
