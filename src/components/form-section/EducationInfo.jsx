@@ -22,6 +22,15 @@ function EducationInfo({educationItems, setEducationItems}) {
         setEducationItems((prevItems) => [...prevItems, newItem])
     }
 
+    function handleFormCancel(event) {
+        setItemDraft({
+            institutionName: "",
+            course: "",
+            graduationDate: "",
+            description: "",
+        })
+    }
+
     return (
         <div className="form-section" id="education-info-form">
             <h2>Education</h2>
@@ -71,12 +80,19 @@ function EducationInfo({educationItems, setEducationItems}) {
 
                 <div className="form-btns">
                     <button 
+                        type="submit"
                         className="submit-btn"
                         onClick={handleFormSubmit}
                     >
                         Submit
                     </button>
-                    <button className="cancel-btn">Cancel</button>
+                    <button 
+                        type="reset"
+                        className="cancel-btn"
+                        onClick={handleFormCancel}
+                    >
+                        Cancel
+                    </button>
                 </div>
             </form>
         </div>

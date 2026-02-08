@@ -3,6 +3,7 @@ import './styles/App.css'
 import Header from "./components/Header"
 import PersonalInfo from "./components/form-section/PersonalInfo";
 import EducationInfo from "./components/form-section/EducationInfo"
+import MyDocument from "./components/pdf-section/Document"
 
 function App() {
   const [educationItems, setEducationItems] = useState([
@@ -15,7 +16,7 @@ function App() {
   ]);
 
   return (
-    <>
+    <div id="content">
       <div id="header-container">
           <Header />
       </div>
@@ -27,7 +28,10 @@ function App() {
             setEducationItems={setEducationItems}
         />
       </div>
-    </>
+      <div id="document-container">
+        <MyDocument />
+      </div>
+    </div>
   )
 }
 
