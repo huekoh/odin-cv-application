@@ -1,9 +1,9 @@
 import { useState } from "react";
-import './styles/App.css'
-import Header from "./components/Header"
+import "./styles/App.css";
+import Header from "./components/Header";
 import PersonalInfo from "./components/form-section/PersonalInfo";
-import EducationInfo from "./components/form-section/EducationInfo"
-import MyDocument from "./components/pdf-section/Document"
+import EducationInfo from "./components/form-section/EducationInfo";
+import MyDocument from "./components/pdf-section/Document";
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -13,41 +13,41 @@ function App() {
     contactNumber: "8744 0293",
     linkedIn: "linkedin.com/in/tanjj123456",
     addUrl: "",
-  })
+  });
 
   const [educationItems, setEducationItems] = useState([
     {
-        institutionName: "National University of Singapore (NUS)",
-        course: "Bachelor of Computing in Computer Science",
-        graduationDate: "2027-05",
-        description: "Specialing in data analysis, parallel computing",
-    }
+      institutionName: "National University of Singapore (NUS)",
+      course: "Bachelor of Computing in Computer Science",
+      graduationDate: "2027-05",
+      description: "Specialing in data analysis, parallel computing",
+    },
   ]);
 
   return (
     <div id="content">
       <div id="header-container">
-          <Header />
+        <Header />
       </div>
       <div id="side-bar-container">
-        <PersonalInfo 
-            personalInfo={personalInfo}
-            setPersonalInfo={setPersonalInfo}
+        <PersonalInfo
+          personalInfo={personalInfo}
+          setPersonalInfo={setPersonalInfo}
         />
 
-        <EducationInfo 
-            educationItems={educationItems}
-            setEducationItems={setEducationItems}
+        <EducationInfo
+          educationItems={educationItems}
+          setEducationItems={setEducationItems}
         />
       </div>
       <div id="document-container">
-        <MyDocument 
+        <MyDocument
           personalInfo={personalInfo}
           educationItems={educationItems}
         />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

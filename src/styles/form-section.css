@@ -49,10 +49,10 @@ form {
   color: rgb(107, 107, 107);
 }
 
-.form-btns {
+.btn-container {
   margin-top: 0.5rem;
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 button {
@@ -67,4 +67,39 @@ button {
 
 .cancel-btn {
   background-color: rgb(208, 99, 99);
+}
+
+.add-btn {
+  background-color: rgb(213, 104, 217);
+}
+
+.edit-btn,
+.del-btn {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  background: rgb(205, 156, 156);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-btn {
+  background: rgb(159, 188, 124);
+}
+
+.del-btn {
+  background: rgb(201, 126, 126);
+}
+
+.education-item {
+  background-color: rgb(245, 245, 245);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+
+  display: flex;
+  gap: 1.5rem;
 }
