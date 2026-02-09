@@ -3,6 +3,7 @@ import "./styles/App.css";
 import Header from "./components/Header";
 import PersonalInfo from "./components/form-section/PersonalInfo";
 import EducationInfo from "./components/form-section/EducationInfo";
+import ExperienceInfo from "./components/form-section/ExperienceInfo";
 import MyDocument from "./components/pdf-section/Document";
 
 function App() {
@@ -24,6 +25,16 @@ function App() {
     },
   ]);
 
+  const [experienceItems, setExperienceItems] = useState([
+    {
+      companyName: "Central Provident Fund Board",
+      jobTitle: "Cloud Migration Intern",
+      startDate: "2024-05",
+      endDate: "2024-06",
+      description: "",
+    },
+  ]);
+
   return (
     <div id="content">
       <div id="header-container">
@@ -38,6 +49,11 @@ function App() {
         <EducationInfo
           educationItems={educationItems}
           setEducationItems={setEducationItems}
+        />
+
+        <ExperienceInfo
+          experienceItems={experienceItems}
+          setExperienceItems={setExperienceItems}
         />
       </div>
       <div id="document-container">

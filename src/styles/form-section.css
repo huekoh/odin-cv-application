@@ -95,7 +95,8 @@ button {
   background: rgb(201, 126, 126);
 }
 
-.education-item {
+.education-item,
+.experience-item {
   background-color: rgb(245, 245, 245);
   padding: 0.6rem 1rem;
   border-radius: 8px;
