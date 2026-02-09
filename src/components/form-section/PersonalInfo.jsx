@@ -71,7 +71,7 @@ function PersonalInfo({personalInfo, setPersonalInfo}) {
                 </div>
 
                 <div className="input-field">
-                    <label htmlFor="addUrl">Additional URL</label>
+                    <label htmlFor="addUrl">Additional URL (optional)</label>
                     <input 
                         type="url" 
                         name="addUrl" 

@@ -60,7 +60,7 @@ function EducationInfo({educationItems, setEducationItems}) {
                 <div className="input-field">
                     <label htmlFor="graduationDate">Graduation/Expected Graduation</label>
                     <input 
-                        type="date" 
+                        type="month" 
                         name="graduationDate" 
                         id="graduationDate"
                         value={itemDraft.graduationDate}
@@ -69,7 +69,7 @@ function EducationInfo({educationItems, setEducationItems}) {
                 </div>
 
                 <div className="input-field">
-                    <label htmlFor="description">Description</label>
+                    <label htmlFor="description">Description (optional)</label>
                     <textarea 
                         name="description" 
                         id="description"

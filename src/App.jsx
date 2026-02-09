@@ -17,9 +17,9 @@ function App() {
 
   const [educationItems, setEducationItems] = useState([
     {
-        institutionName: "National University of Singapore",
-        course: "Computer Science",
-        graduationDate: "May 2027",
+        institutionName: "National University of Singapore (NUS)",
+        course: "Bachelor of Computing in Computer Science",
+        graduationDate: "2027-05",
         description: "Specialing in data analysis, parallel computing",
     }
   ]);
@@ -43,6 +43,7 @@ function App() {
       <div id="document-container">
         <MyDocument 
           personalInfo={personalInfo}
+          educationItems={educationItems}
         />
       </div>
     </div>
