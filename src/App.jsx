@@ -31,7 +31,8 @@ function App() {
       jobTitle: "Cloud Migration Intern",
       startDate: "2024-05",
       endDate: "2024-06",
-      description: "",
+      description:
+        "- Developed a prototype for Microsoft Entra ID (MFA) authentication in a Java web application.\n- Reviewed and contributed to project use case documentation, ensuring clarity and completeness.",
     },
   ]);
 
@@ -60,6 +61,7 @@ function App() {
         <MyDocument
           personalInfo={personalInfo}
           educationItems={educationItems}
+          experienceItems={experienceItems}
         />
       </div>
     </div>

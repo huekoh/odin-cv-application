@@ -62,9 +62,10 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
     }
 
     setItemDraft({
-      institutionName: "",
-      course: "",
-      graduationDate: "",
+      companyName: "",
+      jobTitle: "",
+      startDate: "",
+      endDate: "",
       description: "",
     });
     setIsAdding(false);
@@ -74,9 +75,10 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
 
   function handleFormCancel() {
     setItemDraft({
-      institutionName: "",
-      course: "",
-      graduationDate: "",
+      companyName: "",
+      jobTitle: "",
+      startDate: "",
+      endDate: "",
       description: "",
     });
     setIsEditing(false);
