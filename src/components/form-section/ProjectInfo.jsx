@@ -93,7 +93,7 @@ function ProjectInfo({ projectItems, setProjectItems }) {
   if (!isAdding && !isEditing) {
     return (
       <div className="form-section" id="project-info-form">
-        <h2>Projetcs</h2>
+        <h2>Projects</h2>
         <button
           type="button"
           className="add-btn clickable"
