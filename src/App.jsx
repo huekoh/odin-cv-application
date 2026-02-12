@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import PersonalInfo from "./components/form-section/PersonalInfo";
 import EducationInfo from "./components/form-section/EducationInfo";
 import ExperienceInfo from "./components/form-section/ExperienceInfo";
+import ProjectInfo from "./components/form-section/ProjectInfo";
 import MyDocument from "./components/pdf-section/Document";
 
 function App() {
@@ -36,6 +37,17 @@ function App() {
     },
   ]);
 
+  const [projectItems, setProjectItems] = useState([
+    {
+      projectName: "CV Generator Web Application",
+      association: "The Odin Project Course (TOP)",
+      startDate: "2026-01",
+      endDate: "",
+      description:
+        "- Built a responsive single-page resume builder leveraging React for real-time, stateful form management across multiple sections.\n- Structured app with component-based architecture, separating concerns across Personal Info, Education, and Experience form sections with clean prop drilling for shared state.",
+    },
+  ]);
+
   return (
     <div id="content">
       <div id="header-container">
@@ -56,12 +68,18 @@ function App() {
           experienceItems={experienceItems}
           setExperienceItems={setExperienceItems}
         />
+
+        <ProjectInfo
+          projectItems={projectItems}
+          setProjectItems={setProjectItems}
+        />
       </div>
       <div id="document-container">
         <MyDocument
           personalInfo={personalInfo}
           educationItems={educationItems}
           experienceItems={experienceItems}
+          projectItems={projectItems}
         />
       </div>
     </div>

@@ -72,7 +72,12 @@ function formatGraduationDate(date) {
   }
 }
 
-function MyDocument({ personalInfo, educationItems, experienceItems }) {
+function MyDocument({
+  personalInfo,
+  educationItems,
+  experienceItems,
+  projectItems,
+}) {
   return (
     <PDFViewer style={{ width: "100%", height: "100%" }}>
       <Document>
@@ -154,6 +159,34 @@ function MyDocument({ personalInfo, educationItems, experienceItems }) {
           {/* projects information section */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>RELEVANT PROJECTS</Text>
+            {projectItems.map((item, index) => (
+              <View key={index} style={styles.sectionItem}>
+                <View style={{ flexDirection: "row" }}>
+                  <Text style={{ fontWeight: "semibold" }}>
+                    {item.projectName}
+                  </Text>
+                  <Text style={{ marginLeft: "auto" }}>
+                    {formatDate(item.startDate)} -{" "}
+                    {item.endDate ? formatDate(item.endDate) : "Present"}
+                  </Text>
+                </View>
+                <Text style={{ fontWeight: "semibold" }}>
+                  {item.association}
+                </Text>
+                {item.description &&
+                  item.description.split("\n-").map((point, index) => (
+                    <View
+                      key={index}
+                      style={{ flexDirection: "row", marginLeft: 10 }}
+                    >
+                      <Text>• </Text>
+                      <Text style={{ flex: 1, marginLeft: 10 }}>
+                        {point.replace(/^-?\s*/, "")}
+                      </Text>
+                    </View>
+                  ))}
+              </View>
+            ))}
           </View>
 
           {/* skills information section */}

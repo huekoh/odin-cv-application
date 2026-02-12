@@ -2,10 +2,10 @@ import { useState } from "react";
 import { FiEdit2, FiTrash2 } from "react-icons/fi";
 import "../../styles/form-section.css";
 
-function ExperienceInfo({ experienceItems, setExperienceItems }) {
+function ProjectInfo({ projectItems, setProjectItems }) {
   const [itemDraft, setItemDraft] = useState({
-    companyName: "",
-    jobTitle: "",
+    projectName: "",
+    association: "",
     startDate: "",
     endDate: "",
     description: "",
@@ -24,8 +24,8 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
 
   function handleAddOpen() {
     setItemDraft({
-      companyName: "",
-      jobTitle: "",
+      projectName: "",
+      association: "",
       startDate: "",
       endDate: "",
       description: "",
@@ -36,8 +36,8 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
 
   function handleEditOpen(item, index) {
     setItemDraft({
-      companyName: item.companyName,
-      jobTitle: item.jobTitle,
+      projectName: item.projectName,
+      association: item.association,
       startDate: item.startDate,
       endDate: item.endDate,
       description: item.description,
@@ -52,18 +52,18 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
     const newItem = itemDraft;
 
     if (isEditing) {
-      setExperienceItems((prevItems) =>
+      setProjectItems((prevItems) =>
         prevItems.map((item, index) =>
           index === editIndex ? itemDraft : item,
         ),
       );
     } else {
-      setExperienceItems((prevItems) => [...prevItems, newItem]);
+      setProjectItems((prevItems) => [...prevItems, newItem]);
     }
 
     setItemDraft({
-      companyName: "",
-      jobTitle: "",
+      projectName: "",
+      association: "",
       startDate: "",
       endDate: "",
       description: "",
@@ -75,8 +75,8 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
 
   function handleFormCancel() {
     setItemDraft({
-      companyName: "",
-      jobTitle: "",
+      projectName: "",
+      association: "",
       startDate: "",
       endDate: "",
       description: "",
@@ -87,25 +87,23 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
   }
 
   function handleDeleteItem(index) {
-    setExperienceItems((prevItems) =>
-      prevItems.filter((_, idx) => idx !== index),
-    );
+    setProjectItems((prevItems) => prevItems.filter((_, idx) => idx !== index));
   }
 
   if (!isAdding && !isEditing) {
     return (
-      <div className="form-section" id="experience-info-form">
-        <h2>Experience</h2>
+      <div className="form-section" id="project-info-form">
+        <h2>Projetcs</h2>
         <button
           type="button"
           className="add-btn clickable"
           onClick={handleAddOpen}
         >
-          Add Experience +
+          Add Project +
         </button>
-        {experienceItems.map((item, index) => (
-          <div key={index} className="experience-item">
-            <p>{item.companyName}</p>
+        {projectItems.map((item, index) => (
+          <div key={index} className="project-item">
+            <p>{item.projectName}</p>
             <div className="btn-container">
               <button
                 className="edit-btn clickable"
@@ -128,55 +126,55 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
 
   if (isAdding || isEditing) {
     return (
-      <div className="form-section" id="experience-info-form">
-        <h2>Experience</h2>
+      <div className="form-section" id="project-info-form">
+        <h2>Projects</h2>
         <form>
           <div className="input-field">
-            <label htmlFor="companyName">Company Name</label>
+            <label htmlFor="projectName">Project Name</label>
             <input
               type="text"
-              name="companyName"
-              id="companyName"
-              value={itemDraft.companyName}
+              name="projectName"
+              id="projectName"
+              value={itemDraft.projectName}
               onChange={handleFormChange}
             />
           </div>
 
           <div className="input-field">
-            <label htmlFor="jobTitle">Job Title</label>
+            <label htmlFor="association">Project Association</label>
             <input
               type="text"
-              name="jobTitle"
-              id="jobTitle"
-              value={itemDraft.jobTitle}
+              name="association"
+              id="association"
+              value={itemDraft.course}
               onChange={handleFormChange}
             />
           </div>
 
           <div className="input-field">
-            <label htmlFor="startDateExperience">Start Date</label>
+            <label htmlFor="startDateProject">Start Date</label>
             <input
               type="month"
-              name="startDateExperience"
-              id="startDateExperience"
+              name="startDateProject"
+              id="startDateProject"
               value={itemDraft.startDate}
               onChange={handleFormChange}
             />
           </div>
 
           <div className="input-field">
-            <label htmlFor="endDateExperience">End Date (N/A if current)</label>
+            <label htmlFor="EndDateProject">End Date (N/A if current)</label>
             <input
               type="month"
-              name="endDateExperience"
-              id="endDateExperience"
+              name="EndDateProject"
+              id="EndDateProject"
               value={itemDraft.endDate}
               onChange={handleFormChange}
             />
           </div>
 
           <div className="input-field">
-            <label htmlFor="description">Description (optional)</label>
+            <label htmlFor="description">Description</label>
             <textarea
               name="description"
               id="description"
@@ -207,4 +205,4 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
   }
 }
 
-export default ExperienceInfo;
+export default ProjectInfo;
