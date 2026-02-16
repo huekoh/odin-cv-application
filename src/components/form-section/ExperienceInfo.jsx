@@ -130,7 +130,7 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
     return (
       <div className="form-section" id="experience-info-form">
         <h2>Experience</h2>
-        <form>
+        <form onSubmit={handleFormSubmit}>
           <div className="input-field">
             <label htmlFor="companyName">Company Name</label>
             <input
@@ -139,6 +139,7 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
               id="companyName"
               value={itemDraft.companyName}
               onChange={handleFormChange}
+              required
             />
           </div>
 
@@ -150,6 +151,7 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
               id="jobTitle"
               value={itemDraft.jobTitle}
               onChange={handleFormChange}
+              required
             />
           </div>
 
@@ -161,6 +163,7 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
               id="startDate"
               value={itemDraft.startDate}
               onChange={handleFormChange}
+              required
             />
           </div>
 
@@ -186,11 +189,7 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
           </div>
 
           <div className="btn-container">
-            <button
-              type="submit"
-              className="submit-btn clickable"
-              onClick={handleFormSubmit}
-            >
+            <button type="submit" className="submit-btn clickable">
               Submit
             </button>
             <button

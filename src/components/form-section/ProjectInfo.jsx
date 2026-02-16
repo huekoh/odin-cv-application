@@ -128,7 +128,7 @@ function ProjectInfo({ projectItems, setProjectItems }) {
     return (
       <div className="form-section" id="project-info-form">
         <h2>Projects</h2>
-        <form>
+        <form onSubmit={handleFormSubmit}>
           <div className="input-field">
             <label htmlFor="projectName">Project Name</label>
             <input
@@ -137,6 +137,7 @@ function ProjectInfo({ projectItems, setProjectItems }) {
               id="projectName"
               value={itemDraft.projectName}
               onChange={handleFormChange}
+              required
             />
           </div>
 
@@ -148,6 +149,7 @@ function ProjectInfo({ projectItems, setProjectItems }) {
               id="association"
               value={itemDraft.association}
               onChange={handleFormChange}
+              required
             />
           </div>
 
@@ -159,6 +161,7 @@ function ProjectInfo({ projectItems, setProjectItems }) {
               id="startDate"
               value={itemDraft.startDate}
               onChange={handleFormChange}
+              required
             />
           </div>
 
@@ -184,11 +187,7 @@ function ProjectInfo({ projectItems, setProjectItems }) {
           </div>
 
           <div className="btn-container">
-            <button
-              type="submit"
-              className="submit-btn clickable"
-              onClick={handleFormSubmit}
-            >
+            <button type="submit" className="submit-btn clickable">
               Submit
             </button>
             <button

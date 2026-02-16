@@ -125,7 +125,7 @@ function EducationInfo({ educationItems, setEducationItems }) {
     return (
       <div className="form-section" id="education-info-form">
         <h2>Education</h2>
-        <form>
+        <form onSubmit={handleFormSubmit}>
           <div className="input-field">
             <label htmlFor="institutionName">Institution Name</label>
             <input
@@ -134,6 +134,7 @@ function EducationInfo({ educationItems, setEducationItems }) {
               id="institutionName"
               value={itemDraft.institutionName}
               onChange={handleFormChange}
+              required
             />
           </div>
 
@@ -145,6 +146,7 @@ function EducationInfo({ educationItems, setEducationItems }) {
               id="course"
               value={itemDraft.course}
               onChange={handleFormChange}
+              required
             />
           </div>
 
@@ -158,6 +160,7 @@ function EducationInfo({ educationItems, setEducationItems }) {
               id="graduationDate"
               value={itemDraft.graduationDate}
               onChange={handleFormChange}
+              required
             />
           </div>
 
@@ -172,11 +175,7 @@ function EducationInfo({ educationItems, setEducationItems }) {
           </div>
 
           <div className="btn-container">
-            <button
-              type="submit"
-              className="submit-btn clickable"
-              onClick={handleFormSubmit}
-            >
+            <button type="submit" className="submit-btn clickable">
               Submit
             </button>
             <button

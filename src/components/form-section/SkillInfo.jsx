@@ -113,7 +113,7 @@ function SkillInfo({ skillItems, setSkillItems }) {
     return (
       <div className="form-section" id="skills-info-form">
         <h2>Skills</h2>
-        <form>
+        <form onSubmit={handleFormSubmit}>
           <div className="input-field">
             <label htmlFor="skillGroup">Skill Group</label>
             <input
@@ -122,6 +122,7 @@ function SkillInfo({ skillItems, setSkillItems }) {
               id="skillGroup"
               value={itemDraft.skillGroup}
               onChange={handleFormChange}
+              required
             />
           </div>
 
@@ -132,15 +133,12 @@ function SkillInfo({ skillItems, setSkillItems }) {
               id="groupItems"
               value={itemDraft.groupItems}
               onChange={handleFormChange}
+              required
             />
           </div>
 
           <div className="btn-container">
-            <button
-              type="submit"
-              className="submit-btn clickable"
-              onClick={handleFormSubmit}
-            >
+            <button type="submit" className="submit-btn clickable">
               Submit
             </button>
             <button
