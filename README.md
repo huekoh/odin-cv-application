@@ -1,16 +1,47 @@
-# React + Vite
+# CV Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page resume builder built with React. Fill in your details and download a formatted PDF resume.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-blue) ![react-pdf](https://img.shields.io/badge/@react--pdf%2Frenderer-4.3-red)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Edit personal info, education, work experience, projects, and skills
+- Live PDF preview that updates as you add and submit new entries
+- Add, edit, and delete entries for each section
+- Download the finished resume as a PDF
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React** — UI and state management
+- **@react-pdf/renderer** — PDF generation and live preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+git clone https://github.com/your-username/cv-generator.git
+cd cv-generator
+npm install
+npm run dev
+```
+
+## Usage
+
+Fill in your details using the form on the left. The PDF preview on the right updates as you add and submit entries. Once done, click the download button in the preview to save your resume.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── form-section/     # Input forms for each resume section
+│   └── pdf-section/      # PDF layout and rendering
+├── styles/
+├── App.jsx
+└── main.jsx
+              # Root component, holds all state
+```
+
+## Motivation
+
+Built as part of [The Odin Project](https://www.theodinproject.com/) curriculum to practise React fundamentals — component architecture, state management, and controlled forms.
