@@ -77,6 +77,7 @@ function MyDocument({
   educationItems,
   experienceItems,
   projectItems,
+  skillItems,
 }) {
   return (
     <PDFViewer style={{ width: "100%", height: "100%" }}>
@@ -192,6 +193,12 @@ function MyDocument({
           {/* skills information section */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>SKILLS</Text>
+            {skillItems.map((item, index) => (
+              <View key={index} style={{ flexDirection: "row" }}>
+                <Text style={{ fontWeight: "bold" }}>{item.skillGroup}: </Text>
+                <Text>{item.groupItems}</Text>
+              </View>
+            ))}
           </View>
         </Page>
       </Document>

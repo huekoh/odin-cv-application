@@ -50,6 +50,7 @@ form {
 }
 
 .btn-container {
+  margin-left: auto;
   margin-top: 0.5rem;
   display: flex;
   gap: 0.8rem;
@@ -97,11 +98,13 @@ button {
 
 .education-item,
 .experience-item,
-.project-item {
+.project-item,
+.skill-item {
   background-color: rgb(245, 245, 245);
   padding: 0.6rem 1rem;
   border-radius: 8px;
 
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }

@@ -5,6 +5,7 @@ import PersonalInfo from "./components/form-section/PersonalInfo";
 import EducationInfo from "./components/form-section/EducationInfo";
 import ExperienceInfo from "./components/form-section/ExperienceInfo";
 import ProjectInfo from "./components/form-section/ProjectInfo";
+import SkillInfo from "./components/form-section/SkillInfo";
 import MyDocument from "./components/pdf-section/Document";
 
 function App() {
@@ -48,6 +49,14 @@ function App() {
     },
   ]);
 
+  const [skillItems, setSkillItems] = useState([
+    { skillGroup: "Languages", groupItems: "Javascript, Python, Java, C#" },
+    {
+      skillGroup: "Tools and Technologies",
+      groupItems: "React, PostgrSQL, django, Spring",
+    },
+  ]);
+
   return (
     <div id="content">
       <div id="header-container">
@@ -73,6 +82,8 @@ function App() {
           projectItems={projectItems}
           setProjectItems={setProjectItems}
         />
+
+        <SkillInfo skillItems={skillItems} setSkillItems={setSkillItems} />
       </div>
       <div id="document-container">
         <MyDocument
@@ -80,6 +91,7 @@ function App() {
           educationItems={educationItems}
           experienceItems={experienceItems}
           projectItems={projectItems}
+          skillItems={skillItems}
         />
       </div>
     </div>
