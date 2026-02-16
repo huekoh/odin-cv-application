@@ -146,28 +146,28 @@ function ProjectInfo({ projectItems, setProjectItems }) {
               type="text"
               name="association"
               id="association"
-              value={itemDraft.course}
+              value={itemDraft.association}
               onChange={handleFormChange}
             />
           </div>
 
           <div className="input-field">
-            <label htmlFor="startDateProject">Start Date</label>
+            <label htmlFor="startDate">Start Date</label>
             <input
               type="month"
-              name="startDateProject"
-              id="startDateProject"
+              name="startDate"
+              id="startDate"
               value={itemDraft.startDate}
               onChange={handleFormChange}
             />
           </div>
 
           <div className="input-field">
-            <label htmlFor="EndDateProject">End Date (N/A if current)</label>
+            <label htmlFor="endDate">End Date (N/A if current)</label>
             <input
               type="month"
-              name="EndDateProject"
-              id="EndDateProject"
+              name="endDate"
+              id="endDate"
               value={itemDraft.endDate}
               onChange={handleFormChange}
             />

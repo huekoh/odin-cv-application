@@ -154,22 +154,22 @@ function ExperienceInfo({ experienceItems, setExperienceItems }) {
           </div>
 
           <div className="input-field">
-            <label htmlFor="startDateExperience">Start Date</label>
+            <label htmlFor="startDate">Start Date</label>
             <input
               type="month"
-              name="startDateExperience"
-              id="startDateExperience"
+              name="startDate"
+              id="startDate"
               value={itemDraft.startDate}
               onChange={handleFormChange}
             />
           </div>
 
           <div className="input-field">
-            <label htmlFor="endDateExperience">End Date (N/A if current)</label>
+            <label htmlFor="endDate">End Date (N/A if current)</label>
             <input
               type="month"
-              name="endDateExperience"
-              id="endDateExperience"
+              name="endDate"
+              id="endDate"
               value={itemDraft.endDate}
               onChange={handleFormChange}
             />
