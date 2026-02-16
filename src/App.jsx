@@ -13,47 +13,81 @@ function App() {
     fullName: "Tan Jun Jie",
     title: "Data Analyst Undergraduate",
     email: "tanjj01@gmail.com",
-    contactNumber: "8744 0293",
-    linkedIn: "linkedin.com/in/tanjj123456",
-    addUrl: "",
+    contactNumber: "+65 8744 XXXX",
+    linkedIn: "linkedin.com/in/tanjjlit",
+    addUrl: "github.com/jjlit",
   });
 
   const [educationItems, setEducationItems] = useState([
     {
       institutionName: "National University of Singapore (NUS)",
-      course: "Bachelor of Computing in Computer Science",
+      course: "Bachelor of Science in Data Science and Analytics",
       graduationDate: "2027-05",
-      description: "Specialing in data analysis, parallel computing",
+      description:
+        "Specialisations: Statistical Modelling, Machine Learning, Database Systems",
     },
   ]);
 
   const [experienceItems, setExperienceItems] = useState([
     {
-      companyName: "Central Provident Fund Board",
-      jobTitle: "Cloud Migration Intern",
-      startDate: "2024-05",
-      endDate: "2024-06",
+      companyName: "GovTech Singapore",
+      jobTitle: "Data Analyst Intern",
+      startDate: "2025-05",
+      endDate: "2025-08",
       description:
-        "- Developed a prototype for Microsoft Entra ID (MFA) authentication in a Java web application.\n- Reviewed and contributed to project use case documentation, ensuring clarity and completeness.",
+        "- Designed and maintained interactive dashboards in Tableau to surface key operational metrics for cross-functional teams.\n- Automated data cleaning pipelines using Python (pandas), reducing manual processing time by 40%.\n- Collaborated with product teams to define KPIs and translate business requirements into analytical reports.",
+    },
+    {
+      companyName: "NUS Office of Campus Amenities",
+      jobTitle: "Data & Operations Assistant (Part-time)",
+      startDate: "2024-08",
+      endDate: "2025-04",
+      description:
+        "- Aggregated and analysed campus facility usage data using Excel and SQL to support resource planning decisions.\n- Prepared weekly summary reports for management, highlighting trends and anomalies in occupancy data.",
     },
   ]);
 
   const [projectItems, setProjectItems] = useState([
     {
       projectName: "CV Generator Web Application",
-      association: "The Odin Project Course (TOP)",
+      association: "The Odin Project Online Course (TOP)",
       startDate: "2026-01",
       endDate: "",
       description:
         "- Built a responsive single-page resume builder leveraging React for real-time, stateful form management across multiple sections.\n- Structured app with component-based architecture, separating concerns across Personal Info, Education, and Experience form sections with clean prop drilling for shared state.",
     },
+    {
+      projectName: "Singapore Housing Price Predictor",
+      association: "NUS Data Science & Analytics Coursework",
+      startDate: "2025-01",
+      endDate: "2025-04",
+      description:
+        "- Engineered features from HDB resale flat transaction data and trained regression models (Linear, Random Forest, XGBoost) to predict resale prices with ~92% R² accuracy.\n- Built an interactive web dashboard using Streamlit to allow users to input flat attributes and receive instant price estimates.",
+    },
+    {
+      projectName: "Social Media Sentiment Analysis",
+      association: "Personal Project",
+      startDate: "2024-10",
+      endDate: "2024-12",
+      description:
+        "- Scraped and processed Reddit post data using Python (PRAW, BeautifulSoup) to analyse public sentiment around local tech industry topics.\n- Applied NLP techniques including TF-IDF and VADER sentiment scoring; visualised results with word clouds and trend charts.",
+    },
   ]);
 
   const [skillItems, setSkillItems] = useState([
-    { skillGroup: "Languages", groupItems: "Javascript, Python, Java, C#" },
     {
-      skillGroup: "Tools and Technologies",
-      groupItems: "React, PostgrSQL, django, Spring",
+      skillGroup: "Languages",
+      groupItems: "Python, SQL, R, JavaScript, Java",
+    },
+    {
+      skillGroup: "Tools & Technologies",
+      groupItems:
+        "Pandas, NumPy, Scikit-learn, Tableau, PostgreSQL, React, Git",
+    },
+    {
+      skillGroup: "Concepts",
+      groupItems:
+        "Machine Learning, Statistical Analysis, Data Visualisation, ETL Pipelines",
     },
   ]);
 
